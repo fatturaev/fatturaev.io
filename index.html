@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f3eb">
+
+<title>Свадебное приглашение</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f3eb;
+    color: #514638;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:
+    linear-gradient(rgba(248,243,235,.72),rgba(248,243,235,.88)),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600');
+    background-size: cover;
+    background-position: center;
+}
+
+.small-title {
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #a58a62;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 10vw, 100px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.amp {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 65px;
+    color: #b69a70;
+    margin: 10px;
+}
+
+.subtitle {
+    margin-top: 35px;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.line {
+    width: 75px;
+    height: 1px;
+    background: #b69a70;
+    margin: 30px auto;
+}
+
+.date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    color: #a58a62;
+}
+
+section {
+    padding: 85px 20px;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.text {
+    max-width: 550px;
+    margin: auto;
+    line-height: 2;
+    font-size: 14px;
+    color: #756b60;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.countdown div {
+    min-width: 75px;
+}
+
+.countdown span {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    color: #a58a62;
+}
+
+.countdown small {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.details {
+    background: #eee6da;
+}
+
+.detail-box {
+    margin: 35px auto;
+    max-width: 450px;
+}
+
+.detail-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    border: 1px solid #a58a62;
+    color: #786345;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #a58a62;
+    color: white;
+}
+
+footer {
+    padding: 55px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: #a58a62;
+}
+
+.fade {
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero fade">
+
+    <div class="small-title">Wedding Invitation</div>
+
+    <!-- Имена молодожёнов -->
+    <h1>Имя жениха</h1>
+    <div class="amp">&</div>
+    <h1>Имя невесты</h1>
+
+    <div class="line"></div>
+
+    <div class="subtitle">
+        Приглашаем вас на нашу свадьбу
+    </div>
+
+    <div class="date">
+        20 Июня 2027
+    </div>
+
+</div>
+
+<section>
+    <h2>Дорогие гости!</h2>
+
+    <p class="text">
+        В нашей жизни наступает особенный и счастливый момент.
+        Мы решили соединить наши сердца и создать семью.
+
+        <br><br>
+
+        С огромной радостью приглашаем вас разделить
+        с нами этот прекрасный день!
+    </p>
+</section>
+
+<section class="details">
+
+    <h2>До нашей свадьбы</h2>
+
+    <div class="countdown">
+        <div>
+            <span id="days">00</span>
+            <small>Дней</small>
+        </div>
+
+        <div>
+            <span id="hours">00</span>
+            <small>Часов</small>
+        </div>
+
+        <div>
+            <span id="minutes">00</span>
+            <small>Минут</small>
+        </div>
+
+        <div>
+            <span id="seconds">00</span>
+            <small>Секунд</small>
+        </div>
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Детали торжества</h2>
+
+    <div class="detail-box">
+        <h3>Дата</h3>
+        <p class="text">20 июня 2027 года</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="detail-box">
+        <h3>Время</h3>
+        <p class="text">16:00</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="detail-box">
+        <h3>Место проведения</h3>
+        <p class="text">Название ресторана, адрес</p>
+
+        <a class="button"
+           href="https://maps.google.com/"
+           target="_blank">
+           Открыть карту
+        </a>
+    </div>
+
+</section>
+
+<section class="details">
+
+    <h2>Будем рады видеть вас!</h2>
+
+    <p class="text">
+        Ваше присутствие и добрые пожелания
+        сделают этот день ещё счастливее.
+    </p>
+
+    <a class="button"
+       href="https://wa.me/992XXXXXXXXX"
+       target="_blank">
+       Подтвердить присутствие
+    </a>
+
+</section>
+
+<footer>
+    С любовью ❤️
+    <br>
+    Имя жениха & Имя невесты
+</footer>
+
+<script>
+
+// Установи дату своей свадьбы
+const weddingDate = new Date("2027-06-20T16:00:00").getTime();
+
+function updateCountdown() {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance <= 0) {
+        document.querySelector(".countdown").innerHTML =
+            "Сегодня наш особенный день! ❤️";
+        return;
+    }
+
+    document.getElementById("days").innerText =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    document.getElementById("hours").innerText =
+        Math.floor((distance / (1000 * 60 * 60)) % 24);
+
+    document.getElementById("minutes").innerText =
+        Math.floor((distance / (1000 * 60)) % 60);
+
+    document.getElementById("seconds").innerText =
+        Math.floor((distance / 1000) % 60);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+</script>
+
+</body>
+</html>
